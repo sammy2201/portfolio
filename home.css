@@ -1,12 +1,13 @@
 .pic1 {
-    height: 670px;
-    width: 485px;
+    height: 100%;
+    width: 72%;
 
 }
 
 body {
     background-color: #1F6E8C;
     color: white;
+    position: relative;
     /* background-image: linear-gradient(to top, #000205, #3b3c3e, #777879, #b9b9ba, #ffffff); */
 }
 
