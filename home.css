@@ -1,18 +1,20 @@
 .pic1 {
-    height: 500px;
-    width: 380px
+    height: 670px;
+    width: 485px;
+
 }
 
 body {
-    background-color: black;
+    background-color: #1F6E8C;
     color: white;
     /* background-image: linear-gradient(to top, #000205, #3b3c3e, #777879, #b9b9ba, #ffffff); */
 }
 
 
 .name {
-    margin-top: 20%;
+    margin-top: 10%;
     text-align: center;
+    padding-left: 1%;
 }
 
 .bg-black {
@@ -77,8 +79,9 @@ hr.new1 {
 
 .fot {
     margin-top: 5%;
-    background-color: #130f40;
-    background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+    background-color: #E3F4F4;
+    color: #1F6E8C;
+    padding: 2%;
 }
 
 form {
@@ -88,7 +91,7 @@ form {
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
 :root {
-    --glow-color: hsl(216 100% 67%);
+    --glow-color: #1F6E8C;
 }
 
 *,
@@ -168,7 +171,7 @@ form {
 }
 
 .glowing-btn:hover {
-    color: rgba(0, 0, 0, 0.8);
+    color: white;
     text-shadow: none;
     animation: none;
 }
@@ -456,24 +459,35 @@ input[type=radio] {
 
 #item-3:checked~.player #test {
     transform: translateY(-80px);
-}
-
-.about {
-    width: 80%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    margin-top: 10%;
-    margin-bottom: 10%;
 
 }
 
 .intro {
 
     background-color: #0d0a0b;
-    background-image: linear-gradient(315deg, #0d0a0b 0%, #009fc2 74%);
+    background-image: linear-gradient(315deg, black 0%, #1F6E8C 79%);
     font-family: sans-serif;
+    padding-top: 5%;
+
 }
+
+.row {
+    width: 100%;
+}
+
+.about {
+
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-color: #1F6E8C;
+
+}
+
+
+
 
 .location {
 
@@ -563,6 +577,7 @@ input[type=radio] {
     overflow: hidden;
     color: #000;
     margin-left: 6%;
+    margin-top: 5%;
 }
 
 #left-zone {
@@ -692,12 +707,19 @@ input[type=radio]:checked~.content {
 }
 
 .social {
-    height: 60%;
+
     padding-bottom: 3%;
+    background-color: #000;
+    text-align: center;
 }
 
 .link {
     color: white;
+    margin-top: 4%;
+}
+
+.sc {
+    padding-top: 5%;
 }
 
 .link :hover {
