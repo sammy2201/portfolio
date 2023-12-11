@@ -9,6 +9,10 @@
     margin-top: 10%;
 }
 
+p{
+   font-family:  Andika;
+}
+
 .pic1:hover {
     transform: scale(1.4);
     margin-left: 30px;
@@ -494,6 +498,8 @@ input[type=radio] {
 .intro {
     font-family: sans-serif;
     padding-top: 5%;
+    /* position: fixed;
+    z-index: -2; */
 }
 
 .row {
@@ -1006,3 +1012,5 @@ input[type=radio]:checked~.content {
 .insta{
     top: 190px;
 }
+
+
