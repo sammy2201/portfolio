@@ -28,6 +28,10 @@
     background-color: #000;
 }
 
+.name h1{
+    font-family: Lora;
+}
+
 #logo {
     width: 30px;
     height: 30px;
