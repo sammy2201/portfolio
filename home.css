@@ -87,6 +87,8 @@ hr.new1 {
 
 
 .fot {
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top: 5%;
     background-color: #E3F4F4;
     color: #1F6E8C;
@@ -342,7 +344,9 @@ body {
     height: 100%;
 }
 
-
+body p{
+    color: red;
+}
 
 input[type=radio] {
     display: none;
@@ -703,11 +707,11 @@ input[type=radio]:checked~.content {
 }
 
 .social {
-
-    padding-bottom: 3%;
-    background-color: #000;
-    text-align: center;
+    height: 35px;
+    width: 35px;
+    color: #5FBDFF;
 }
+
 
 .link {
     color: white;
@@ -954,4 +958,36 @@ input[type=radio]:checked~.content {
 .footer__parralax-secondplan {
   background-image: url(https://i.ibb.co/J3TjC4W/second-plan.png);
   animation-duration: 600s;
+}
+
+.sticky-text {
+    position: fixed;
+    top: 10px; /* Adjust the distance from the bottom as needed */
+    right: 10px; /* Adjust the distance from the right as needed */
+    color: #5FBDFF;
+    padding: 10px;
+    writing-mode: vertical-rl
+}
+.vertical-line {
+    position:sticky;
+    border-left: 2px solid #5FBDFF; /* Adjust the color and width as needed */
+    height: 200px; /* Adjust the height as needed */
+    margin-left: 50px; /* Adjust the margin as needed */
+}
+
+.sticky-text-left {
+    position: fixed;
+    top: 100px; /* Adjust the distance from the bottom as needed */
+    left: 10px; /* Adjust the distance from the right as needed */
+    color: #5FBDFF;
+    padding: 10px;
+    writing-mode: vertical-rl
+}
+
+.github{
+    top: 145px;
+}
+
+.insta{
+    top: 190px;
 }
