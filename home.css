@@ -45,6 +45,14 @@ p {
 .navbar-brand {
     padding: 14px 20px;
     font-size: 16px;
+
+}
+
+.navbar {
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+    width: 100%;
 }
 
 .navbar-nav {
@@ -851,6 +859,7 @@ input[type=radio]:checked~.content {
     color: #fff;
     background: #000;
     margin-top: auto;
+    text-align: center;
 }
 
 .footer__col-title {
@@ -1020,7 +1029,9 @@ input[type=radio]:checked~.content {
     /* Adjust the distance from the right as needed */
     color: #5FBDFF;
     padding: 10px;
-    writing-mode: vertical-rl
+    writing-mode: vertical-rl;
+    z-index: 100;
+
 }
 
 .vertical-line {
@@ -1198,4 +1209,14 @@ body {
         border-radius: 50%;
     }
 
+}
+
+.footer_logo {
+    height: 50px;
+    width: 50px;
+}
+
+.navbar_logo {
+    height: 30px;
+    width: 30px;
 }
