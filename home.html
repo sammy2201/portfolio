@@ -90,9 +90,6 @@
 
 
 <body>
-
-
-
   <div class="about">
     <p>
       Hi there! My name is Sanmay Bhavanish Thota, and I am currently based in Oxie, Malomo, Sweden, pursuing my studies
@@ -107,7 +104,9 @@
   </div>
 
 
-  <div class="container con-card" id="Aboutme">
+
+
+  <div class="container con-card reveal" id="Aboutme">
     <input type="radio" name="slider" id="item-1" checked />
     <input type="radio" name="slider" id="item-2" />
     <input type="radio" name="slider" id="item-3" />
@@ -197,7 +196,7 @@
   </div>
 
 
-  <div id="Projects">
+  <div id="Projects" class="reveal project_whole">
     <h2 class="pro"> &lt; Projects /&gt;</h2>
     <hr class="new1">
     <p class="pro1">I am thrilled to present to you a collection of my notable projects that showcase my skills and
@@ -313,7 +312,7 @@
 
 
 
-  <div class="art" id="Art">
+  <div class="art " id="Art">
     <h2> &lt; Art /&gt; </h2>
     <hr class="new1">
     <p>🎨 Welcome to my creative corner! 🖌️ On this website, I'm thrilled to share a glimpse into my artistic world
@@ -334,7 +333,7 @@
   </div>
 
 
-  <div class=" fot " id="Contactme">
+  <div class=" fot reveal" id="Contactme">
     <h3>Drop a message</h3>
 
 
@@ -425,6 +424,23 @@
           console.error('Error:', error);
         });
     }
+
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 50;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+    window.addEventListener("scroll", reveal);
   </script>
 
 

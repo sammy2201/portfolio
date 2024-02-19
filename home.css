@@ -389,7 +389,7 @@ input[type=radio] {
     /* background-color: #E3F4F4; */
     color: #1F6E8C;
     overflow-y: scroll;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .card h4 {
@@ -1245,4 +1245,46 @@ body {
 .footer_p {
     margin-top: 10px;
     color: white !important;
+}
+
+/* Add the reveal class to the container */
+.container.con-card {
+    transform: translateY(250px);
+    transition: 0.8s all ease;
+}
+
+/* Add the reveal.active class to show the card on scroll */
+.container.con-card.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* .art {
+    transform: translateY(250px);
+    transition: 0.8s all ease;
+}
+
+.art.active {
+    transform: translateY(0);
+    opacity: 1;
+} */
+
+.project_whole {
+    transform: translateY(250px);
+    transition: 0.8s all ease;
+}
+
+.project_whole.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.fot {
+    transform: translateY(250px);
+    transition: 0.8s all ease;
+}
+
+.fot.active {
+    transform: translateY(0);
+    opacity: 1;
 }
