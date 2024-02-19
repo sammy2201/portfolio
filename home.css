@@ -389,6 +389,7 @@ input[type=radio] {
     background-color: #E3F4F4;
     color: #1F6E8C;
     overflow-y: scroll;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .card h4 {
@@ -668,6 +669,7 @@ input[type=radio]~label:hover {
     overflow-x: scroll;
     overflow-y: scroll;
 
+
 }
 
 .content h1:first-letter {
@@ -823,7 +825,10 @@ input[type=radio]:checked~.content {
     offset-path: path('m 5 65 q 45-0 90-0 t 90 0 90 0 90-0 90 0');
     box-shadow: 3px 4px 10px #0006;
     z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+
+
 
 .artimage:nth-last-child(5):first-child {
     offset-distance: 0%;
