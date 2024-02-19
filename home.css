@@ -1244,5 +1244,5 @@ body {
 
 .footer_p {
     margin-top: 10px;
-    color: white;
+    color: white !important;
 }
