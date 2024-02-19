@@ -1241,3 +1241,8 @@ body {
     margin-top: 5px;
     margin-bottom: 15px;
 }
+
+.footer_p {
+    margin-top: 10px;
+    color: white;
+}
