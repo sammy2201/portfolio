@@ -11,7 +11,7 @@
 }
 
 p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -30,7 +30,7 @@ p {
 }
 
 .name h1 {
-    font-family: Lora;
+    font-family: 'Poppins', sans-serif;
 }
 
 #logo {
@@ -99,15 +99,15 @@ hr.new1 {
 }
 
 h2 {
-    font-family: Nanum Gothic Coding;
+    font-family: 'Poppins', sans-serif;
 }
 
 h4 {
-    font-family: Nanum Gothic Coding;
+    font-family: 'Poppins', sans-serif;
 }
 
 #scene h1 {
-    font-family: Nanum Gothic Coding;
+    font-family: 'Poppins', sans-serif;
 }
 
 .fot {
@@ -368,6 +368,7 @@ body {
     height: 100%;
 }
 
+
 body p {
     color: #61677A;
 }
@@ -397,16 +398,20 @@ input[type=radio] {
 }
 
 .card_otherthan_skills h4 {
-    color: #643843;
+    color: #1E2A5E;
 }
 
-.card_otherthan_skills p {
+/* .card_otherthan_skills p {
     color: #0A1D56;
-}
+} */
 
 .card_otherthan_skills {
     background-color: white;
-    color: #85586F !important
+    color: #55679C !important
+}
+
+.color_forli {
+    color: #373A40;
 }
 
 .con-card {
@@ -509,7 +514,7 @@ input[type=radio] {
 }
 
 .intro {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     padding-top: 5%;
     /* position: fixed;
     z-index: -2; */
@@ -524,9 +529,12 @@ input[type=radio] {
 }
 
 .location {
-
     color: gray;
     float: right
+}
+
+.fa-calendar-alt {
+    color: gray !important;
 }
 
 .year {
@@ -656,28 +664,7 @@ input[type=radio]~label:hover {
 }
 
 
-.content {
-    position: absolute;
-    left: 35%;
-    top: -900px;
-    width: 75%;
-    height: 100%;
-    -webkit-animation-duration: 0.75s;
-    animation-duration: 0.75s;
-    -webkit-animation-name: slideout;
-    animation-name: slideout;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: #1F6E8C;
-    overflow-x: scroll;
-    overflow-y: scroll;
 
-
-}
 
 .content h1:first-letter {
     text-transform: uppercase;
@@ -715,14 +702,15 @@ input[type=radio]:checked~label.label_orange {
 }
 
 input[type=radio]:checked~.content {
-    -webkit-animation-duration: 0.75s;
-    animation-duration: 0.75s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-name: slidein;
     animation-name: slidein;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+
 }
 
 #middle-border {
@@ -1081,7 +1069,7 @@ input[type=radio]:checked~.content {
 }
 
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -1287,4 +1275,26 @@ body {
 .fot.active {
     transform: translateY(0);
     opacity: 1;
+}
+
+.content {
+    position: absolute;
+    left: 35%;
+    top: -900px;
+    width: 75%;
+    height: 100%;
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-name: slideout;
+    animation-name: slideout;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #1F6E8C;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    padding: 0
 }
