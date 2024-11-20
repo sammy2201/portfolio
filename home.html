@@ -90,6 +90,7 @@
 
 
 <body>
+
   <div class="about">
     <p>
       Hi there! 👋 My name is Sanmay Bhavanish Thota, and I am currently based in Oxie, Malmö, Sweden. I have completed
@@ -251,89 +252,124 @@
       with creativity to deliver innovative solutions. I am committed to continuous learning and staying up-to-date with
       the latest advancements in Machine Learning and Fullstack Development.</p>
 
-    <div id="scene" class="parent">
-      <div id="left-zone">
-        <ul class="list">
-          <li class="item">
-            <input type="radio" id="1" name="basic_carousel" value="1" checked="checked" />
-            <label class="label_strawberry" for="1">Evaluating automated WAS testing tools</label>
-            <div class="content content_strawberry">
-              <h1>Software Testing</h1>
-              <p>Conducted analysis of 5 automated web application testing tools for website security assessment.</p>
-              <p>Compared and evaluated 5 tools based on key metrics to determine their effectiveness.</p>
-              <p>Project as test environments to assess and compare the tools.</p>
-            </div>
-          </li>
-          <li class="item">
-            <input type="radio" id="6" name="basic_carousel" value="6" />
-            <label class="label_orange" for="6">To Do List</label>
-            <div class="content content_orange">
-              <h1>Fullstack Development (Devops)</h1>
-              <p>Created a adaptive web application using Node.js, MongoDB that allows users to manage their tasks</p>
-              <p>Deployed into AWS using CI/CD, Elastic Beanstalk, S3, Docker pipelines with GITLab.</p>
-              <p>Project Link: <a
-                  href="https://gitlab.com/sanmay1/to-do-list/-/tree/master?ref_type=heads">https://gitlab.com/sanmay1/to-do-list</a>
-              </p>
-            </div>
-          </li>
-          <li class="item">
-            <input type="radio" id="3" name="basic_carousel" value="3" />
-            <label class="label_apple" for="3">Heart disease prediction</label>
-            <div class="content content_apple">
-              <h1>Machine Learning</h1>
-              <p>Built a machine learning-based heart disease prediction model by analyzing different risk factors</p>
-              <p>Attained an accuracy of 94% with XGBoost and 92% with Logistic Regression.</p>
-            </div>
-          </li>
-          <li class="item">
-            <input type="radio" id="4" name="basic_carousel" value="4" />
-            <label class="label_orange" for="4">Group Chat</label>
-            <div class="content content_orange">
-              <h1>Fullstack Development</h1>
-              <p>Created a web application social platform enabling user interaction with others privately and publicly
-              </p>
-              <p>Employed ejs, Node.js, mongoose, express.js, Bootstrap and Figma for user interface development</p>
-              <p>Project Link: <a
-                  href="https://github.com/sammy2201/groupChat">https://github.com/sammy2201/groupChat</a></p>
-            </div>
-          </li>
-          <li class="item">
-            <input type="radio" id="5" name="basic_carousel" value="5" />
-            <label class="label_orange" for="5">Netflix Clone</label>
-            <div class="content content_orange">
-              <h1>Fullstack Development</h1>
-              <p>Built a Netflix-like streaming application using the React.js framework</p>
-              <p>Employed TMDB API for pulling most popular movies and top rated movies.</p>
-            </div>
-          </li>
-          <!-- <li class="item">
-            <input type="radio" id="6" name="basic_carousel" value="6" />
-            <label class="label_orange" for="6">Text Classification</label>
-            <div class="content content_orange">
-              <h1>Machine Learning</h1>
-              <p>Build a Machine learning model used to classify text messages as either spam or not</p>
-              <p>Implemented Natural Language Processing techniques using both NLTK and scikit-learn libraries</p>
-            </div>
-          </li> -->
-          <li class="item">
-            <input type="radio" id="7" name="basic_carousel" value="7" />
-            <label class="label_orange" for="7">Other Projects</label>
-            <div class="content content_orange">
-              <p>Snake game</p>
-              <p>Speech to text web app</p>
-              <p>movie recommendation</p>
-              <p>turtle crossing game</p>
-              <p>message spam classifier</p>
-              <p>Bitcoin Price Predictor</p>
-              <p></p>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div id="middle-border"></div>
-      <div id="right-zone"></div>
+    
+      <div class="projects-board">
+     
+        <article class="board">
+            <!-- Card 1 -->
+            <button class="cardhulk">
+                <span class="wrapper">
+                    <span class="content-dash">
+                        <!-- Back Side -->
+                        <span class="face back"> 
+                          <div class="">
+                          <h1>Software Testing</h1>
+                          <p>Conducted analysis of 5 automated web application testing tools for website security assessment.</p>
+                          <p>Compared and evaluated 5 tools based on key metrics to determine their effectiveness.</p>
+                          <p>Project as test environments to assess and compare the tools.</p>
+                        </div></span>
+                        <!-- Front Side -->
+                        <span class="face front">Evaluating automated WAS testing tools</span>
+                    </span>
+                </span>
+            </button>
+    
+            <!-- Card 2 -->
+            <button class="cardhulk">
+                <span class="wrapper">
+                    <span class="content-dash">
+                        <!-- Back Side -->
+                        <span class="face back">  
+                          <div class="">  
+                          <h1>Fullstack Development (Devops)</h1>
+                          <p>Created a adaptive web application using Node.js, MongoDB that allows users to manage their tasks</p>
+                          <p>Deployed into AWS using CI/CD, Elastic Beanstalk, S3, Docker pipelines with GITLab.</p>
+                          <p>Project Link: <a
+                              href="https://gitlab.com/sanmay1/to-do-list/-/tree/master?ref_type=heads">https://gitlab.com/sanmay1/to-do-list</a>
+                          </p></div>  </span>
+                        <!-- Front Side -->
+                        <span class="face front">To Do List</span>
+                    </span>
+                </span>
+            </button>
+    
+            <!-- Card 3 -->
+            <button class="cardhulk">
+                <span class="wrapper">
+                    <span class="content-dash">
+                        <!-- Back Side -->
+                        <span class="face back">     
+                          <div class="">
+                          <h1>Machine Learning</h1>
+                          <p>Built a machine learning-based heart disease prediction model by analyzing different risk factors</p>
+                          <p>Attained an accuracy of 94% with XGBoost and 92% with Logistic Regression.</p>
+                        </div></span>
+                        <!-- Front Side -->
+                        <span class="face front">Heart disease prediction</span>
+                    </span>
+                </span>
+            </button>
+    
+            <!-- Card 4 -->
+            <button class="cardhulk">
+                <span class="wrapper">
+                    <span class="content-dash">
+                        <!-- Back Side -->
+                        <span class="face back">
+                          <div class="">
+                            <h1>Fullstack Development</h1>
+                            <p>Created a web application social platform enabling user interaction with others privately and publicly
+                            </p>
+                            <p>Employed ejs, Node.js, mongoose, express.js, Bootstrap and Figma for user interface development</p>
+                            <p>Project Link: <a
+                                href="https://github.com/sammy2201/groupChat">https://github.com/sammy2201/groupChat</a></p>
+                          </div>
+                        </span>
+                        <!-- Front Side -->
+                        <span class="face front">Group Chat</span>
+                    </span>
+                </span>
+            </button>
+            <button class="cardhulk">
+              <span class="wrapper">
+                  <span class="content-dash">
+                      <!-- Back Side -->
+                      <span class="face back">
+                        <div class="">
+                          <h1>Fullstack Development</h1>
+                          <p>Built a Netflix-like streaming application using the React.js framework</p>
+                          <p>Employed TMDB API for pulling most popular movies and top rated movies.</p>
+                        </div>
+                      </span>
+                      <!-- Front Side -->
+                      <span class="face front">Netflix Clone</span>
+                  </span>
+              </span>
+          </button>
+          <button class="cardhulk">
+            <span class="wrapper">
+                <span class="content-dash">
+                    <!-- Back Side -->
+                    <span class="face back">
+                      <div class="">
+                        <p>Snake game</p>
+                        <p>Speech to text web app</p>
+                        <p>movie recommendation</p>
+                        <p>turtle crossing game</p>
+                        <p>message spam classifier</p>
+                        <p>Bitcoin Price Predictor</p>
+                        <p></p>
+                      </div>
+                    </span>
+                    <!-- Front Side -->
+                    <span class="face front">Other Projects</span>
+                </span>
+            </span>
+        </button>
+        </article>
     </div>
-  </div>
+    
+ 
 
 
 
@@ -414,6 +450,54 @@
 
 
   <script>
+//     document.addEventListener("DOMContentLoaded", () => {
+//     const cards = document.querySelectorAll(".cardhulk");
+
+//   cards.forEach(card => {
+//     let state = 0; // 0 = initial, 1 = hold, 2 = fall
+
+//     card.addEventListener("click", () => {
+//       if (state === 0) {
+//         card.classList.add("hold");
+//         state = 1;
+//       } else if (state === 1) {
+//         card.classList.remove("hold");
+//         card.classList.add("flipped");
+//         state = 2;
+//       } else if (state === 2) {
+//         card.classList.remove("flipped");
+//         state = 0; // Reset to initial state if needed
+//       }
+//     });
+//   });
+// });
+    document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".cardhulk");
+
+    cards.forEach((card, index) => {
+        let state = 0; // 0 = left, 1 = center, 2 = right
+
+        card.addEventListener("click", () => {
+            if (state === 0) {
+                // Move to center
+                card.classList.remove("left");
+                card.classList.add("hold");
+                state = 1;
+            } else if (state === 1) {
+                // Move to right
+                card.classList.remove("hold");
+                card.classList.add("right");
+                state = 2;
+            } else if (state === 2) {
+                // Move back to left
+                card.classList.remove("right");
+                card.classList.add("left");
+                state = 0;
+            }
+        });
+    });
+});
+
     function submitForm() {
       var formData = {
         firstName: document.getElementById("validationTooltip01").value,

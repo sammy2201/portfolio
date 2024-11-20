@@ -602,108 +602,7 @@ input[type=radio] {
     margin-right: 10%;
 }
 
-#scene {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    width: 80%;
-    height: 100%;
-    overflow: hidden;
-    color: #000;
-    margin-left: 10%;
-    margin-top: 5%;
-}
 
-#left-zone {
-    height: 75%;
-    flex-grow: 0;
-    display: flex;
-    width: 35%;
-    align-items: center;
-    justify-content: left;
-}
-
-.list {
-    display: flex;
-    list-style: none;
-    align-content: stretch;
-    flex-direction: column;
-    flex-grow: 1;
-    margin: 0;
-    padding: 0;
-    background-color: #F5F5F5
-}
-
-input[type=radio] {
-    display: none;
-}
-
-input[type=radio]~label {
-    display: block;
-    opacity: 0.5;
-    height: 12%;
-    text-align: center;
-    line-height: 50px;
-}
-
-input[type=radio]~label:first-letter {
-    text-transform: uppercase;
-}
-
-input[type=radio]~label:hover {
-    opacity: 0.75;
-    cursor: pointer;
-}
-
-
-
-
-.content h1:first-letter {
-    text-transform: uppercase;
-}
-
-.content p {
-    max-width: 50%;
-    text-align: center;
-}
-
-input[type=radio]:checked~label {
-    opacity: 1;
-    -webkit-animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-}
-
-input[type=radio]:checked~label.label_strawberry {
-    color: #000000;
-    border-right: solid 4px #000000;
-}
-
-input[type=radio]:checked~label.label_banana {
-    color: #000000;
-    border-right: solid 4px #000000;
-}
-
-input[type=radio]:checked~label.label_apple {
-    color: #000000;
-    border-right: solid 4px #000000;
-}
-
-input[type=radio]:checked~label.label_orange {
-    color: #000000;
-    border-right: solid 4px #000000;
-}
-
-input[type=radio]:checked~.content {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-name: slidein;
-    animation-name: slidein;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
-    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
-
-}
 
 #middle-border {
     background-color: #eee;
@@ -1062,6 +961,7 @@ input[type=radio]:checked~.content {
 
 body {
     font-family: 'Poppins', sans-serif;
+    transition: opacity 0.5s ease;
 }
 
 
@@ -1239,15 +1139,7 @@ body {
     opacity: 1;
 }
 
-/* .art {
-    transform: translateY(250px);
-    transition: 0.8s all ease;
-}
 
-.art.active {
-    transform: translateY(0);
-    opacity: 1;
-} */
 
 .project_whole {
     transform: translateY(250px);
@@ -1289,4 +1181,151 @@ body {
     overflow-x: scroll;
     overflow-y: scroll;
     padding: 0
+}
+
+.projects-board {
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    perspective: 1500px;
+    /* For 3D effects */
+}
+
+.board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    box-sizing: content-box;
+    aspect-ratio: 16/9;
+    padding: 1rem 3rem;
+
+    background-color: #E3F4F4;
+    height: 400px;
+    position: relative;
+}
+
+.cardhulk {
+    --duration: 800ms;
+    position: absolute;
+    width: 20%;
+    height: 80%;
+    aspect-ratio: 20/29;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    background-color: transparent;
+    transition: transform 1500ms ease-in-out, z-index 1500ms ease-in-out;
+    will-change: transform, z-index;
+    pointer-events: initial;
+    display: flex;
+    margin-right: 30%;
+    transform-style: preserve-3d;
+    border: 1px solid #133E87;
+    backface-visibility: hidden;
+}
+
+
+.cardhulk:nth-child(1) {
+    transform: translateX(-160px);
+    z-index: 5;
+}
+
+.cardhulk:nth-child(2) {
+    transform: translateX(-140px);
+    z-index: 4;
+}
+
+.cardhulk:nth-child(3) {
+    transform: translateX(-120px);
+    z-index: 3;
+}
+
+.cardhulk:nth-child(4) {
+    transform: translateX(-100px);
+    z-index: 2;
+}
+
+.cardhulk:nth-child(5) {
+    transform: translateX(-80px);
+    z-index: 1;
+}
+
+.cardhulk:nth-child(6) {
+    transform: translateX(-60px);
+    z-index: 0;
+}
+
+.wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.content-dash {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 24px; */
+    transition: transform 500ms;
+    border-radius: calc(var(--card-width) / 20);
+}
+
+.front {
+    transform: rotateY(0deg);
+    background-color: #1F6E8C;
+    color: white;
+
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+
+.cardhulk.hold {
+    width: 60%;
+    height: 60%;
+    transform: translateY(-100px) translateX(0) rotateY(0deg);
+    z-index: 10;
+    margin-left: 30%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 5000px -20px, rgba(0, 0, 0, 0.3) 0px 30px 5000px -30px;
+    transition: transform 1000ms ease-in-out, width 500ms ease-in-out, height 900ms ease-in-out, z-index 800ms ease-in-out;
+}
+
+
+
+.cardhulk.hold .back {
+    transform: rotateY(0deg);
+    /* Ensure the back face is visible */
+}
+
+.cardhulk.hold .front {
+    display: none;
+    /* Hide the front face in center */
+}
+
+.cardhulk.right {
+    transform: translateX(300px) scale(1);
+    z-index: 5;
+    /* Move behind center */
+}
+
+.cardhulk.left {
+    transform: translateX(-150px) scale(1);
+    z-index: 1;
+    /* Move back to original */
 }
