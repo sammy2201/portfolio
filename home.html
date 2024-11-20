@@ -252,124 +252,105 @@
       with creativity to deliver innovative solutions. I am committed to continuous learning and staying up-to-date with
       the latest advancements in Machine Learning and Fullstack Development.</p>
 
-    
-      <div class="projects-board">
-     
-        <article class="board">
-            <!-- Card 1 -->
-            <button class="cardhulk">
-                <span class="wrapper">
-                    <span class="content-dash">
-                        <!-- Back Side -->
-                        <span class="face back"> 
-                          <div class="">
-                          <h1>Software Testing</h1>
-                          <p>Conducted analysis of 5 automated web application testing tools for website security assessment.</p>
-                          <p>Compared and evaluated 5 tools based on key metrics to determine their effectiveness.</p>
-                          <p>Project as test environments to assess and compare the tools.</p>
-                        </div></span>
-                        <!-- Front Side -->
-                        <span class="face front">Evaluating automated WAS testing tools</span>
-                    </span>
-                </span>
-            </button>
-    
-            <!-- Card 2 -->
-            <button class="cardhulk">
-                <span class="wrapper">
-                    <span class="content-dash">
-                        <!-- Back Side -->
-                        <span class="face back">  
-                          <div class="">  
-                          <h1>Fullstack Development (Devops)</h1>
-                          <p>Created a adaptive web application using Node.js, MongoDB that allows users to manage their tasks</p>
-                          <p>Deployed into AWS using CI/CD, Elastic Beanstalk, S3, Docker pipelines with GITLab.</p>
-                          <p>Project Link: <a
-                              href="https://gitlab.com/sanmay1/to-do-list/-/tree/master?ref_type=heads">https://gitlab.com/sanmay1/to-do-list</a>
-                          </p></div>  </span>
-                        <!-- Front Side -->
-                        <span class="face front">To Do List</span>
-                    </span>
-                </span>
-            </button>
-    
-            <!-- Card 3 -->
-            <button class="cardhulk">
-                <span class="wrapper">
-                    <span class="content-dash">
-                        <!-- Back Side -->
-                        <span class="face back">     
-                          <div class="">
-                          <h1>Machine Learning</h1>
-                          <p>Built a machine learning-based heart disease prediction model by analyzing different risk factors</p>
-                          <p>Attained an accuracy of 94% with XGBoost and 92% with Logistic Regression.</p>
-                        </div></span>
-                        <!-- Front Side -->
-                        <span class="face front">Heart disease prediction</span>
-                    </span>
-                </span>
-            </button>
-    
-            <!-- Card 4 -->
-            <button class="cardhulk">
-                <span class="wrapper">
-                    <span class="content-dash">
-                        <!-- Back Side -->
-                        <span class="face back">
-                          <div class="">
-                            <h1>Fullstack Development</h1>
-                            <p>Created a web application social platform enabling user interaction with others privately and publicly
-                            </p>
-                            <p>Employed ejs, Node.js, mongoose, express.js, Bootstrap and Figma for user interface development</p>
-                            <p>Project Link: <a
-                                href="https://github.com/sammy2201/groupChat">https://github.com/sammy2201/groupChat</a></p>
-                          </div>
-                        </span>
-                        <!-- Front Side -->
-                        <span class="face front">Group Chat</span>
-                    </span>
-                </span>
-            </button>
-            <button class="cardhulk">
-              <span class="wrapper">
-                  <span class="content-dash">
-                      <!-- Back Side -->
-                      <span class="face back">
-                        <div class="">
-                          <h1>Fullstack Development</h1>
-                          <p>Built a Netflix-like streaming application using the React.js framework</p>
-                          <p>Employed TMDB API for pulling most popular movies and top rated movies.</p>
-                        </div>
-                      </span>
-                      <!-- Front Side -->
-                      <span class="face front">Netflix Clone</span>
-                  </span>
-              </span>
-          </button>
-          <button class="cardhulk">
-            <span class="wrapper">
-                <span class="content-dash">
-                    <!-- Back Side -->
-                    <span class="face back">
-                      <div class="">
-                        <p>Snake game</p>
-                        <p>Speech to text web app</p>
-                        <p>movie recommendation</p>
-                        <p>turtle crossing game</p>
-                        <p>message spam classifier</p>
-                        <p>Bitcoin Price Predictor</p>
-                        <p></p>
-                      </div>
-                    </span>
-                    <!-- Front Side -->
-                    <span class="face front">Other Projects</span>
-                </span>
-            </span>
-        </button>
-        </article>
-    </div>
-    
- 
+    <!-- @TODO: Move away from custom props before injecting the polyfill, as it can't handle it -->
+
+
+
+<main>
+	<ul id="cards">
+		<li class="card-scroll" id="card_1">
+			<div class="card__content">
+				<div>
+					<h2>Evaluating automated WAS testing tools</h2>
+          <p>Conducted analysis of 5 automated web application testing tools for website security assessment.</p>
+          <p>Compared and evaluated 5 tools based on key metrics to determine their effectiveness.</p>
+          <p>Project as test environments to assess and compare the tools.</p>
+					<p><a href="https://www.diva-portal.org/smash/get/diva2:1875457/FULLTEXT01.pdf" class="btn btn--accent">Read more</a></p>
+				</div>
+				<figure>
+					<img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-1.jpg" alt="Image description">
+				</figure>
+			</div>
+		</li>
+		<li class="card-scroll" id="card_2">
+			<div class="card__content">
+				<div>
+					<h2>To Do List</h2>
+          <p>Created a adaptive web application using Node.js, MongoDB that allows users to manage their tasks</p>
+          <p>Deployed into AWS using CI/CD, Elastic Beanstalk, S3, Docker pipelines with GITLab.</p>
+          <p>Project Link: <a
+              href="https://gitlab.com/sanmay1/to-do-list/-/tree/master?ref_type=heads">https://gitlab.com/sanmay1/to-do-list</a>
+          </p>
+				
+				</div>
+				<figure>
+					<img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg" alt="Image description">
+				</figure>
+			</div>
+		</li>
+		<li class="card-scroll" id="card_3">
+			<div class="card__content">
+				<div>
+					<h2>Heart disease prediction</h2>
+          <p>Built a machine learning-based heart disease prediction model by analyzing different risk factors</p>
+          <p>Attained an accuracy of 94% with XGBoost and 92% with Logistic Regression.</p>
+
+				</div>
+				<figure>
+					<img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-3.jpg" alt="Image description">
+				</figure>
+			</div>
+		</li>
+		<li class="card-scroll" id="card_4">
+			<div class="card__content">
+				<div>
+					<h2>Group Chat</h2>
+          <p>Created a web application social platform enabling user interaction with others privately and publicly
+          </p>
+          <p>Employed ejs, Node.js, mongoose, express.js, Bootstrap and Figma for user interface development</p>
+          <p>Project Link: <a
+              href="https://github.com/sammy2201/groupChat">https://github.com/sammy2201/groupChat</a></p>
+	
+				</div>
+				<figure>
+					<img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg" alt="Image description">
+				</figure>
+			</div>
+		</li>
+    <li class="card-scroll" id="card_5">
+			<div class="card__content">
+				<div>
+					<h2>Netflix Clone</h2>
+          <p>Built a Netflix-like streaming application using the React.js framework</p>
+          <p>Employed TMDB API for pulling most popular movies and top rated movies.</p>
+
+				</div>
+				<figure>
+					<img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-1.jpg" alt="Image description">
+				</figure>
+			</div>
+		</li>
+    <li class="card-scroll" id="card_6">
+			<div class="card__content">
+				<div>
+					<h2>Other Projects</h2>
+          <p>Snake game</p>
+          <p>Speech to text web app</p>
+          <p>movie recommendation</p>
+          <p>turtle crossing game</p>
+          <p>message spam classifier</p>
+          <p>Bitcoin Price Predictor</p>
+       
+				</div>
+				<figure>
+					<img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-3.jpg" alt="Image description">
+				</figure>
+			</div>
+		</li>
+	</ul>
+</main>
+
+</div>
 
 
 
