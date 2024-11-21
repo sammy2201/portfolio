@@ -697,7 +697,7 @@ input[type=radio] {
 }
 
 .artimage {
-    height: 130px;
+    height: 150px;
     position: absolute;
     left: 0;
     offset-path: path('m 0 50 q 50-30 100-30 t 100 30 100 0 100-30 100 30');
@@ -725,15 +725,15 @@ input[type=radio] {
 }
 
 .artimage:nth-last-child(3):nth-child(3) {
-    offset-distance: 51%;
+    offset-distance: 50%;
 }
 
 .artimage:nth-last-child(2):nth-child(4) {
-    offset-distance: 75%;
+    offset-distance: 70%;
 }
 
 .artimage:last-child:nth-child(5) {
-    offset-distance: 100%;
+    offset-distance: 120%;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
