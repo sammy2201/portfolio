@@ -1,12 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
 .pic1 {
-    height: 330px;
-    width: 330px;
-    border: 5px solid #5FBDFF;
-    border-radius: 500px;
-    -webkit-border-radius: 500px;
-    -moz-border-radius: 500px;
-    margin-right: 10%;
-    margin-top: 10%;
+    height: 550px;
+    width: 550px;
+    /* border: 5px solid #5FBDFF; */
+    /* border-radius: 500px; */
+    /* -webkit-border-radius: 500px;
+    -moz-border-radius: 500px; */
+    /* margin-right: 10%;
+    margin-top: 70%; */
 }
 
 p {
@@ -15,9 +31,9 @@ p {
 
 .name {
     margin-top: 10%;
-    margin-right: 10px;
     text-align: center;
     padding-left: 1%;
+    margin-left: 10%;
 }
 
 .bg-black {
@@ -40,12 +56,22 @@ p {
 
 }
 
+/* Base styling for the navbar */
 .navbar {
     position: fixed;
-    background-color: white;
-    z-index: 1;
+    top: 0;
+    left: 0;
     width: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
 }
+
+
+
+
 
 .navbar-nav {
     width: 100%;
@@ -349,23 +375,11 @@ form {
 
 
 
-@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
-
-* {
-    box-sizing: border-box;
-}
-
-html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-}
 
 
 body p {
     color: #61677A;
+    font-family: 'Poppins', sans-serif;
 }
 
 input[type=radio] {
@@ -385,6 +399,7 @@ input[type=radio] {
     color: #1F6E8C;
     overflow-y: scroll;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .card h4 {
@@ -424,6 +439,7 @@ input[type=radio] {
     width: 100%;
     height: 100%;
     margin-bottom: 20px;
+
 }
 
 
@@ -433,6 +449,7 @@ input[type=radio] {
     transform: translatex(-40%) scale(0.8);
     opacity: 0.4;
     z-index: 0;
+
 }
 
 #item-1:checked~.cards #song-2,
@@ -440,7 +457,7 @@ input[type=radio] {
 #item-3:checked~.cards #song-1 {
     transform: translatex(40%) scale(0.8);
     opacity: 0.4;
-    z-index: 0;
+
 }
 
 #item-1:checked~.cards #song-1,
@@ -449,6 +466,12 @@ input[type=radio] {
     transform: translatex(0) scale(1);
     opacity: 1;
     z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+.btech {
+    margin-top: 3%;
 }
 
 
@@ -508,16 +531,38 @@ input[type=radio] {
 .intro {
     font-family: 'Poppins', sans-serif;
     padding-top: 5%;
+    height: 100%;
+    background-image: url("images/profilepic.png");
+    background-size: 540px 550px;
+    background-position: right 60%;
+    background-repeat: no-repeat;
+    /* background-image: url("images/grpchat.webp"); */
     /* position: fixed;
     z-index: -2; */
 }
+
+
 
 .row {
     width: 100%;
 }
 
 .about {
-    margin: 10% 10% 10% 10%
+    margin: 10% 10% 10% 10%;
+    opacity: 0;
+    /* Hidden by default */
+    transform: translateY(50px);
+    /* Positioned slightly off-screen */
+    transition: all 1s ease-out;
+    /* Smooth transition */
+    font-size: large;
+}
+
+.about.visible {
+    opacity: 1;
+    /* Fully visible when scrolled into view */
+    transform: translateY(0);
+    /* Reset position */
 }
 
 .location {
@@ -1110,11 +1155,6 @@ body {
     width: 30px;
 }
 
-.pic1:hover {
-    transform: scale(1.2);
-    margin-left: 30px;
-    z-index: 999;
-}
 
 .skillimage {
     width: 100%;
@@ -1138,6 +1178,23 @@ body {
     transform: translateY(0);
     opacity: 1;
 }
+
+/* Initial state of the .reveal elements */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    /* Element starts 30px lower */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    /* Smooth transition */
+}
+
+/* When the element becomes visible and "active" */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+    /* Move to its original position */
+}
+
 
 
 
@@ -1231,6 +1288,7 @@ body {
     position: sticky;
     top: 0;
     padding-top: calc(var(--index) * var(--card-top-offset));
+
 }
 
 @supports (animation-timeline: works) {

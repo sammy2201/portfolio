@@ -61,6 +61,7 @@
 
 
 <div class="text-center intro area ">
+  <!-- <img class="profile-img" src="images/profilepic.png" alt="Profile Picture" /> -->
   <div class="row">
     <div class="col-md-7   name">
       <!-- HTML !-->
@@ -69,9 +70,9 @@
       <hr class="new1">
       <h5>Software Developer | Fullstack Developer | DevOps Engineer</h4>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
       <!-- <button class="button-88" role="button"><a href="./Thota.pdf" download="Sanmay_Bhavanish_Thota" class="link">Resume</a></button> -->
-      <img class="pic1" src="images/profilepic.png" alt="" />
+      <!-- <img class="pic1" src="images/profilepic.png" alt="" /> -->
     </div>
   </div>
   <ul class="circles">
@@ -134,7 +135,7 @@
         <h6>Blekinge Institute of Technology</h6>
         <p class="year"><i class="fas fa-calendar-alt"></i> 2022 - 2024 <span class="location"><i
               class="fas fa-map-marker-alt"></i> Karlskrona, Sweden</span></p>
-        <h4>Bachelors in Computer Science</h4>
+        <h4 class="btech">Bachelors in Computer Science</h4>
         <h6>Jawaharlal Nehru Technological University</h6>
         <p class="year"><i class="fas fa-calendar-alt"></i> 2018 - 2022 <span class="location"><i
               class="fas fa-map-marker-alt"></i> Hyderabad, India</span></p>
@@ -515,21 +516,36 @@
     }
 
     function reveal() {
-      var reveals = document.querySelectorAll(".reveal");
+  var reveals = document.querySelectorAll(".reveal");
 
-      for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 50;
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 50;
 
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-        } else {
-          reveals[i].classList.remove("active");
-        }
-      }
+    // Check if the element is within 50px of the viewport
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
     }
-    window.addEventListener("scroll", reveal);
+  }
+}
+
+window.addEventListener("scroll", reveal);
+
+
+    const aboutSection = document.querySelector('.about');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      aboutSection.classList.add('visible'); // Add the 'visible' class when in view
+    }
+  });
+});
+
+observer.observe(aboutSection);
   </script>
 
 
