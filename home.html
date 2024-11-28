@@ -24,7 +24,18 @@
   <link rel="stylesheet" href="home.css" />
   <script src="https://kit.fontawesome.com/6b88e29b2e.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Your+Selected+Font|Another+Font" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./script.js" defer></script>
+  <!-- Link to JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Include SimplexNoise (for random noise) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
 </head>
+
+
+<body>
+
+
 
 
 <div class="container-fluid px-0">
@@ -57,10 +68,18 @@
   </nav>
 </div>
 
-
-
-
 <div class="text-center intro area ">
+  <div class="flex-container">
+    <div id="page">
+      <div class="">
+          <form >
+              <a href="#" id="trigger" class=""></a>
+          </form>
+      </div>
+    </div>
+  
+    <canvas id="background"></canvas>
+   </div>
   <!-- <img class="profile-img" src="images/profilepic.png" alt="Profile Picture" /> -->
   <div class="row">
     <div class="col-md-7   name">
@@ -90,9 +109,8 @@
 </div>
 
 
-<body>
 
-  <div class="about">
+<div class="about">
     <p>
       Hi there! 👋 My name is Sanmay Bhavanish Thota, and I am currently based in Oxie, Malmö, Sweden. I have completed
       my
@@ -104,7 +122,7 @@
       entry-level role. Let's connect and explore opportunities to contribute to impactful projects and create
       innovative solutions through technology.
     </p>
-  </div>
+</div>
 
 
 
@@ -406,10 +424,6 @@
       <button class='glowing-btn' type="submit"><span class='glowing-txt'>S<span
             class='faulty-letter'>E</span>ND</span></button>
     </form>
-
-    <!-- partial -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./script.js"></script>
   </div>
 
   <div class="sticky-text">
@@ -432,53 +446,8 @@
 
 
   <script>
-//     document.addEventListener("DOMContentLoaded", () => {
-//     const cards = document.querySelectorAll(".cardhulk");
 
-//   cards.forEach(card => {
-//     let state = 0; // 0 = initial, 1 = hold, 2 = fall
-
-//     card.addEventListener("click", () => {
-//       if (state === 0) {
-//         card.classList.add("hold");
-//         state = 1;
-//       } else if (state === 1) {
-//         card.classList.remove("hold");
-//         card.classList.add("flipped");
-//         state = 2;
-//       } else if (state === 2) {
-//         card.classList.remove("flipped");
-//         state = 0; // Reset to initial state if needed
-//       }
-//     });
-//   });
-// });
-    document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".cardhulk");
-
-    cards.forEach((card, index) => {
-        let state = 0; // 0 = left, 1 = center, 2 = right
-
-        card.addEventListener("click", () => {
-            if (state === 0) {
-                // Move to center
-                card.classList.remove("left");
-                card.classList.add("hold");
-                state = 1;
-            } else if (state === 1) {
-                // Move to right
-                card.classList.remove("hold");
-                card.classList.add("right");
-                state = 2;
-            } else if (state === 2) {
-                // Move back to left
-                card.classList.remove("right");
-                card.classList.add("left");
-                state = 0;
-            }
-        });
-    });
-});
+   
 
     function submitForm() {
       var formData = {
@@ -515,7 +484,7 @@
         });
     }
 
-    function reveal() {
+  function reveal() {
   var reveals = document.querySelectorAll(".reveal");
 
   for (var i = 0; i < reveals.length; i++) {
@@ -535,7 +504,7 @@
 window.addEventListener("scroll", reveal);
 
 
-    const aboutSection = document.querySelector('.about');
+const aboutSection = document.querySelector('.about');
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -546,7 +515,211 @@ const observer = new IntersectionObserver(entries => {
 });
 
 observer.observe(aboutSection);
-  </script>
+
+function App(conf) {
+  conf = {
+    fov: 75,
+    cameraZ: 75,
+    xyCoef: 60,
+    zCoef: 10,
+    lightIntensity: 0.9,
+    ambientColor: 0x000000,
+    light1Color: 0x0e09dc,
+    light2Color: 0x1cd1e1,
+    light3Color: 0x18c02c,
+    light4Color: 0xee3bcf,
+    el: "background", // Added default value for 'el'
+  };
+
+  let renderer, scene, camera, cameraCtrl;
+  let width, height, cx, cy, wWidth, wHeight;
+  const TMath = THREE.Math;
+
+  let plane;
+  const simplex = new SimplexNoise();
+
+  const mouse = new THREE.Vector2();
+  const mousePlane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);
+  const mousePosition = new THREE.Vector3();
+  const raycaster = new THREE.Raycaster();
+
+  init();
+
+  function init() {
+    renderer = new THREE.WebGLRenderer({
+      canvas: document.getElementById(conf.el),
+      antialias: true,
+      alpha: true,
+    });
+    camera = new THREE.PerspectiveCamera(conf.fov);
+    camera.position.z = conf.cameraZ;
+
+    updateSize();
+    window.addEventListener("resize", updateSize, false);
+
+    document.addEventListener("mousemove", function (e) {
+      const v = new THREE.Vector3();
+      camera.getWorldDirection(v);
+      v.normalize();
+      mousePlane.normal = v;
+      mouse.x = (e.clientX / width) * 2 - 1;
+      mouse.y = -(e.clientY / height) * 2 + 1;
+      raycaster.setFromCamera(mouse, camera);
+      raycaster.ray.intersectPlane(mousePlane, mousePosition);
+    });
+
+    document.getElementById("trigger").addEventListener("click", function () {
+      randomizeCoefficients();
+      updateLightsColors();
+    });
+
+    initScene();
+    animate();
+  }
+
+  function initScene() {
+    scene = new THREE.Scene();
+    initLights();
+
+    let mat = new THREE.MeshLambertMaterial({
+      color: 0xffffff,
+      side: THREE.DoubleSide,
+    });
+    let geo = new THREE.PlaneBufferGeometry(
+      wWidth,
+      wHeight,
+      wWidth / 2,
+      wHeight / 2
+    );
+    plane = new THREE.Mesh(geo, mat);
+    scene.add(plane);
+
+    plane.rotation.x = -Math.PI / 2 - 0.2;
+    plane.position.y = -25;
+    camera.position.z = 60;
+  }
+
+  function initLights() {
+    const r = 30;
+    const y = 10;
+    const lightDistance = 500;
+
+    light1 = new THREE.PointLight(
+      conf.light1Color,
+      conf.lightIntensity,
+      lightDistance
+    );
+    light1.position.set(0, y, r);
+    scene.add(light1);
+    light2 = new THREE.PointLight(
+      conf.light2Color,
+      conf.lightIntensity,
+      lightDistance
+    );
+    light2.position.set(0, -y, -r);
+    scene.add(light2);
+    light3 = new THREE.PointLight(
+      conf.light3Color,
+      conf.lightIntensity,
+      lightDistance
+    );
+    light3.position.set(r, y, 0);
+    scene.add(light3);
+    light4 = new THREE.PointLight(
+      conf.light4Color,
+      conf.lightIntensity,
+      lightDistance
+    );
+    light4.position.set(-r, y, 0);
+    scene.add(light4);
+  }
+
+  function animate() {
+    requestAnimationFrame(animate);
+
+    animatePlane();
+    animateLights();
+
+    renderer.render(scene, camera);
+  }
+
+  function animatePlane() {
+    gArray = plane.geometry.attributes.position.array;
+    const time = Date.now() * 0.0002;
+    for (let i = 0; i < gArray.length; i += 3) {
+      gArray[i + 2] =
+        simplex.noise4D(
+          gArray[i] / conf.xyCoef,
+          gArray[i + 1] / conf.xyCoef,
+          time,
+          mouse.x + mouse.y
+        ) * conf.zCoef;
+    }
+    plane.geometry.attributes.position.needsUpdate = true;
+  }
+
+  function animateLights() {
+    const time = Date.now() * 0.001;
+    const d = 50;
+    light1.position.x = Math.sin(time * 0.1) * d;
+    light1.position.z = Math.cos(time * 0.2) * d;
+    light2.position.x = Math.cos(time * 0.3) * d;
+    light2.position.z = Math.sin(time * 0.4) * d;
+    light3.position.x = Math.sin(time * 0.5) * d;
+    light3.position.z = Math.sin(time * 0.6) * d;
+    light4.position.x = Math.sin(time * 0.7) * d;
+    light4.position.z = Math.cos(time * 0.8) * d;
+  }
+
+  function updateLightsColors() {
+    light1.color = new THREE.Color(conf.light1Color);
+    light2.color = new THREE.Color(conf.light2Color);
+    light3.color = new THREE.Color(conf.light3Color);
+    light4.color = new THREE.Color(conf.light4Color);
+  }
+
+  function randomizeCoefficients() {
+    // No randomization needed, coefficients are set to specific values
+  }
+
+  function updateSize() {
+    width = window.innerWidth;
+    cx = width / 2;
+    height = window.innerHeight;
+    cy = height / 2;
+    if (renderer && camera) {
+      renderer.setSize(width, height);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+      const wsize = getRendererSize();
+      wWidth = wsize[0];
+      wHeight = wsize[1];
+    }
+  }
+
+  function getRendererSize() {
+    const cam = new THREE.PerspectiveCamera(camera.fov, camera.aspect);
+    const vFOV = (cam.fov * Math.PI) / 180;
+    const height = 2 * Math.tan(vFOV / 2) * Math.abs(conf.cameraZ);
+    const width = height * cam.aspect;
+    return [width, height];
+  }
+}
+
+// Create an instance of App with default configuration
+App({ el: "background" });
+
+
+window.addEventListener('scroll', function() {
+    var canvas = document.getElementById('background');
+    
+    if (window.scrollY > 0) {  // Check if the page has been scrolled
+      canvas.style.opacity = 0;  // Hide the canvas
+    } else {
+      canvas.style.opacity = 1;  // Show the canvas when at the top of the page
+    }
+  });
+</script>
 
 
 </body>
