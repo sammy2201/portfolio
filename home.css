@@ -963,7 +963,7 @@ input[type=radio] {
     color: #5FBDFF;
     padding: 10px;
     writing-mode: vertical-rl;
-    z-index: 100;
+    z-index: 1002;
 
 }
 
