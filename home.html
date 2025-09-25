@@ -106,7 +106,9 @@
       </ul>
     </div>
 
-    <div class="about">
+    <h2 class="div-headings">About Me</h2>
+    <hr class="slash-line" />
+    <div class="about reveal">
       <p>
         Hi there! 👋 My name is Sanmay Bhavanish Thota, and I’m currently based
         in Malmö, Sweden. I completed my Master’s in Software Engineering at
@@ -122,63 +124,17 @@
       </p>
     </div>
 
-    <div class="container con-card reveal" id="Aboutme">
-      <input type="radio" name="slider" id="item-1" checked />
-      <input type="radio" name="slider" id="item-2" />
-      <input type="radio" name="slider" id="item-3" />
-      <div class="cards">
-        <label class="card" for="item-1" id="song-1">
-          <h4>Programming Languages</h4>
-          <img src="images/skill.png" class="skillimage" alt="" />
-
-          <h4>Skill Set</h4>
-          <!-- <p class="xp_des"> HTML, CSS, Bootstrap, SQL, Node.js, MongoDB, Express.js, PHP, Mongoose, React.js, Numpy, AWS,
-          CI/CD, UI/UX design, Machine Learning, LINUX, DevOps, Kubernetes, Docker, Agile, Testing, Angular, REST API
-        </p> -->
-          <img src="images/skillset.png" class="skillimage" alt="" />
-          <h4>Tools</h4>
-          <p class="xp_des">
-            Figma, GIT, Jira, GITHUB, OWASP ZAP, Postman, GITLAB
-          </p>
-          <p>
-            Data Structures, Computer Network, Operating Systems, Software
-            Quality Assurance, UML
-          </p>
-        </label>
-
-        <!-- //////////Education///////// -->
-        <label class="card card_otherthan_skills" for="item-2" id="song-2">
-          <h4>Masters in Software Engineering</h4>
-          <h6>Blekinge Institute of Technology</h6>
-          <p class="year">
-            <i class="fas fa-calendar-alt"></i> 2022 - 2024
-            <span class="location"
-              ><i class="fas fa-map-marker-alt"></i> Karlskrona, Sweden</span
-            >
-          </p>
-          <h4 class="btech">Bachelors in Computer Science</h4>
-          <h6>Jawaharlal Nehru Technological University</h6>
-          <p class="year">
-            <i class="fas fa-calendar-alt"></i> 2018 - 2022
-            <span class="location"
-              ><i class="fas fa-map-marker-alt"></i> Hyderabad, India</span
-            >
-          </p>
-          <p>CGPA - 8.13</p>
-        </label>
-
-        <!-- ///////////Work xp///////// -->
-
-        <label class="card card_otherthan_skills" for="item-3" id="song-3">
-          <h4>Software Developer(Founder)(Part-Time)</h4>
+    <div class="container reveal about-me" id="Aboutme">
+      <div class="card work-experience-section">
+        <div class="card-title">Experience</div>
+        <div class="job">
+          <h4>Software Developer (Founder) (Part-Time)</h4>
           <h5>ToneSet</h5>
-          <p class="year">
+          <p class="year-location">
             <i class="fas fa-calendar-alt"></i> Nov 2024 – Present
-            <span class="location"
-              ><i class="fas fa-map-marker-alt"></i> Sweden</span
-            >
+            <i class="fas fa-map-marker-alt"></i> Sweden
           </p>
-          <ul class="color_forli">
+          <ul>
             <li>
               Built a responsive web app designed to improve engagement by up to
               20% through faster performance.
@@ -200,48 +156,46 @@
               and followed the Kanban method for efficient development.
             </li>
           </ul>
+        </div>
 
+        <div class="job">
           <h4>Software Developer</h4>
           <h5>InnoBee</h5>
-          <p class="year">
+          <p class="year-location">
             <i class="fas fa-calendar-alt"></i> Nov 2024 – Present
-            <span class="location"
-              ><i class="fas fa-map-marker-alt"></i> Sweden</span
-            >
+            <i class="fas fa-map-marker-alt"></i> Sweden
           </p>
-          <ul class="color_forli">
+          <ul>
             <li>
               Built a user-friendly platform using Next.js, React, and
               TypeScript, for organizations to collaborate on challenges.
             </li>
             <li>
               Developed backend systems using REST API, Python, and
-              microservices, improving performance by 10%
+              microservices, improving performance by 10%.
             </li>
-            <li></li>
             <li>
               Worked in Agile sprints to deliver features on time and maintain
               high code quality.
             </li>
           </ul>
+        </div>
 
-          <!-- ///////////next xp///////// -->
+        <div class="job">
           <h4>Backend Developer</h4>
           <h5>XRsolutions</h5>
-          <p class="year">
+          <p class="year-location">
             <i class="fas fa-calendar-alt"></i> May 2024 – Nov 2024
-            <span class="location"
-              ><i class="fas fa-map-marker-alt"></i> Sweden</span
-            >
+            <i class="fas fa-map-marker-alt"></i> Sweden
           </p>
-          <ul class="color_forli">
+          <ul>
             <li>
-              CCollaborated with a development team of 11 to build a web app,
+              Collaborated with a development team of 11 to build a web app,
               working to display 3D models on 2D video.
             </li>
             <li>
               Optimized PostgreSQL databases with AWS RDS and S3, enhancing
-              performance and storage eﬃciency by 5%.
+              performance and storage efficiency by 5%.
             </li>
             <li>
               Developed API endpoints with REST API, Node.js, and Express.js.
@@ -255,17 +209,16 @@
               to sprint planning and stand-ups.
             </li>
           </ul>
+        </div>
 
-          <!-- ///////////next xp///////// -->
+        <div class="job">
           <h4>Software Developer</h4>
           <h5>Exposys Data Lab</h5>
-          <p class="year">
+          <p class="year-location">
             <i class="fas fa-calendar-alt"></i> Aug 2023 – Feb 2024
-            <span class="location"
-              ><i class="fas fa-map-marker-alt"></i> Remote</span
-            >
+            <i class="fas fa-map-marker-alt"></i> Remote
           </p>
-          <ul class="color_forli">
+          <ul>
             <li>Developed an E-Learning application platform.</li>
             <li>
               Implemented CI/CD pipelines to automate deployment on AWS,
@@ -276,17 +229,16 @@
               AWS, HTML, GitLab, and Git.
             </li>
           </ul>
+        </div>
 
-          <!-- ///////////next xp///////// -->
+        <div class="job">
           <h4>Developer</h4>
           <h5>Digital Platform For Adoption (Academic Work)</h5>
-          <p class="year">
+          <p class="year-location">
             <i class="fas fa-calendar-alt"></i> Jan 2021 – Dec 2022
-            <span class="location"
-              ><i class="fas fa-map-marker-alt"></i> India</span
-            >
+            <i class="fas fa-map-marker-alt"></i> India
           </p>
-          <ul class="color_forli">
+          <ul>
             <li>
               Prototyped a child adoption web app, boosting user engagement by
               60% with post-sharing and real-time chat features.
@@ -297,20 +249,19 @@
             </li>
             <li>
               Presented our organization’s goals at various gatherings,
-              resulting in a 30% increase in collaborative initiatives
+              resulting in a 30% increase in collaborative initiatives.
             </li>
           </ul>
+        </div>
 
-          <!-- ///////////next xp///////// -->
+        <div class="job">
           <h4>Fullstack Developer</h4>
-          <h5>The sparks foundation</h5>
-          <p class="year">
+          <h5>The Sparks Foundation</h5>
+          <p class="year-location">
             <i class="fas fa-calendar-alt"></i> July 2020 – Nov 2020
-            <span class="location"
-              ><i class="fas fa-map-marker-alt"></i> India</span
-            >
+            <i class="fas fa-map-marker-alt"></i> India
           </p>
-          <ul class="color_forli">
+          <ul>
             <li>
               Developed a banking website facilitating seamless transfer of
               funds while ensuring the security of users' data.
@@ -322,18 +273,16 @@
               <li>Database: MongoDB</li>
             </ul>
           </ul>
+        </div>
 
-          <!-- ///////////next xp///////// -->
-
-          <h4>Backend web Developer</h4>
+        <div class="job">
+          <h4>Backend Web Developer</h4>
           <h5>Yantromitra</h5>
-          <p class="year">
+          <p class="year-location">
             <i class="fas fa-calendar-alt"></i> Jan 2020 – May 2020
-            <span class="location"
-              ><i class="fas fa-map-marker-alt"></i> India</span
-            >
+            <i class="fas fa-map-marker-alt"></i> India
           </p>
-          <ul class="color_forli">
+          <ul>
             <li>
               Implemented the backend for a student-oriented website, resulting
               in a 30% reduction in administrative workload through streamlined
@@ -343,36 +292,45 @@
               Technologies used: Node.js, Express.js, MongoDB, and JavaScript.
             </li>
           </ul>
-        </label>
-      </div>
-
-      <div class="player">
-        <div class="upper-part">
-          <div class="info-area" id="test">
-            <label class="song-info" id="song-info-1">
-              <div class="title">
-                <h4>Skills</h4>
-              </div>
-            </label>
-            <label class="song-info" id="song-info-2">
-              <div class="title">
-                <h4>Education</h4>
-              </div>
-            </label>
-            <label class="song-info" id="song-info-3">
-              <div class="title">
-                <h4>Experience</h4>
-              </div>
-            </label>
-          </div>
         </div>
+      </div>
+      <div class="card education-section">
+        <div class="card-title">Education</div>
+        <h4>Masters in Software Engineering</h4>
+        <h6>Blekinge Institute of Technology</h6>
+        <p class="year-location">
+          <i class="fas fa-calendar-alt"></i> 2022 - 2024
+          <i class="fas fa-map-marker-alt"></i> Karlskrona, Sweden
+        </p>
+        <h4>Bachelors in Computer Science</h4>
+        <h6>Jawaharlal Nehru Technological University</h6>
+        <p class="year-location">
+          <i class="fas fa-calendar-alt"></i> 2018 - 2022
+          <i class="fas fa-map-marker-alt"></i> Hyderabad, India
+        </p>
+        <p class="cgpa">CGPA - 8.13</p>
+      </div>
+      <div class="card skills-section">
+        <div class="card-title">Skills</div>
+        <h4>Programming Languages</h4>
+        <img src="images/skill.png" alt="Skills" class="skill-image" />
+        <h4>Skill Set</h4>
+        <img src="images/skillset.png" alt="Skill Set" class="skill-image" />
+        <h4>Tools</h4>
+        <p class="tools-list">
+          Figma, GIT, Jira, GITHUB, OWASP ZAP, Postman, GITLAB
+        </p>
+        <p class="knowledge">
+          Data Structures, Computer Network, Operating Systems, Software Quality
+          Assurance, UML
+        </p>
       </div>
     </div>
 
-    <div id="Projects" class="reveal project_whole">
-      <h2 class="pro">&lt; Projects /&gt;</h2>
-      <hr class="new1" />
-      <p class="pro1">
+    <h2 class="div-headings">Projects</h2>
+    <div id="Projects" class="reveal project_whole_div">
+      <hr class="slash-line" />
+      <p class="project_div_description">
         I am thrilled to present to you a collection of my notable projects that
         showcase my skills and passion for these fields. For instance, I built a
         heart disease prediction model, achieving impressive accuracy rates
@@ -380,7 +338,7 @@
         projects reflect my ability to analyze complex data and develop robust
         machine learning models.
       </p>
-      <p class="pro1">
+      <p class="project_div_description">
         Furthermore, my proficiency in Full Stack Development has allowed me to
         create impactful web applications. I have worked on diverse projects,
         including a digital platform for adoption that utilized an agile
@@ -535,9 +493,9 @@
       </main>
     </div>
 
+    <h2 class="div-headings">Art</h2>
     <div class="art" id="Art">
-      <h2>&lt; Art /&gt;</h2>
-      <hr class="new1" />
+      <hr class="slash-line" />
       <p>
         🎨 Welcome to my creative corner! 🖌️ On this website, I'm thrilled to
         share a glimpse into my artistic world through a collection of sketches.
@@ -561,7 +519,7 @@
       </p>
     </div>
 
-    <div class="fot reveal" id="Contactme">
+    <div class="Drop_a_message reveal" id="Contactme">
       <h3>Drop a message</h3>
 
       <form action="https://formspree.io/f/mzbnrowl" method="POST">
