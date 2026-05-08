@@ -1,6 +1,7 @@
 :root {
   color-scheme: light;
   --ink: #14213d;
+  --mid-black: #263449;
   --muted: #657086;
   --paper: #f8fafc;
   --panel: #ffffff;
@@ -280,7 +281,7 @@ h3 {
   content: "";
   position: absolute;
   inset: 1rem;
-  border: 1px dashed rgba(20, 33, 61, 0.18);
+  border: none;
   border-radius: 1.2rem;
   pointer-events: none;
 }
@@ -293,7 +294,7 @@ h3 {
   border-radius: 1.2rem;
   background:
     radial-gradient(circle at 25% 20%, var(--gold), transparent 7rem),
-    radial-gradient(circle at 80% 30%, var(--coral), transparent 8rem),
+    radial-gradient(circle at 80% 30%, var(--mid-black), transparent 8rem),
     linear-gradient(145deg, #17324d, #0f766e 54%, #e8eef4);
   overflow: hidden;
 }
