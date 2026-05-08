@@ -87,6 +87,54 @@ a {
   }
 }
 
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -419,9 +467,17 @@ h3 {
 .section,
 .contact-section,
 .site-footer {
-  animation: softRise both;
-  animation-timeline: view();
-  animation-range: entry 0% cover 32%;
+  animation: none;
+}
+
+@media (max-width: 900px) {
+  .section,
+  .contact-section,
+  .site-footer {
+    animation: softRise both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 32%;
+  }
 }
 
 .section-heading {
@@ -728,6 +784,56 @@ h3 {
   margin: 0;
 }
 
+@media (min-width: 901px) {
+  .hero {
+    animation: floatIn 1.2s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+
+  .about-section {
+    animation: slideInLeft 1s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+  }
+
+  .timeline-item {
+    animation: fadeInUp 0.8s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 60%;
+  }
+
+  .timeline-item:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .timeline-item:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  .timeline-item:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+
+  .project-grid {
+    animation: scaleIn 1s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 15% cover 55%;
+  }
+
+  .art-layout {
+    animation: slideInRight 1s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+  }
+
+  .contact-section {
+    animation: fadeInUp 1s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 45%;
+  }
+}
+
 @media (max-width: 900px) {
   .site-header {
     align-items: flex-start;
@@ -810,6 +916,14 @@ h3 {
 
   .site-footer {
     flex-direction: column;
+  }
+
+  .section,
+  .contact-section,
+  .site-footer {
+    animation: softRise both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 32%;
   }
 }
 
