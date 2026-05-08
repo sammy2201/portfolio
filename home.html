@@ -1,876 +1,354 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Sanmay</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      crossorigin="anonymous" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous" />
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sanmay Bhavanish Thota | Software Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Sanmay Bhavanish Thota, a software developer based in Sweden specializing in full-stack development, DevOps, AI/ML, and cloud systems." />
     <link rel="stylesheet" href="home.css" />
-    <script
-      src="https://kit.fontawesome.com/6b88e29b2e.js"
-      crossorigin="anonymous"></script>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Your+Selected+Font|Another+Font" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./script.js" defer></script>
-    <!-- Link to JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <!-- Include SimplexNoise (for random noise) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
   </head>
-
   <body>
-    <div class="container-fluid px-0">
-      <nav class="navbar navbar-expand-sm py-0 px-0">
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#intro">
-                <img src="images/logo.png" class="navbar_logo" alt=""
-              /></a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#Aboutme">About me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#Projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#Art">Art</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#Contactme">Contact me</a>
-            </li>
-          </ul>
-        </div>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Sanmay home">
+        <span class="brand-mark">ST</span>
+        <span>Sanmay</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#art">Art</a>
+        <a href="#contact">Contact</a>
       </nav>
-    </div>
+    </header>
 
-    <div class="intro area">
-      <div class="flex-container">
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Based in Sweden</p>
+            <h1>Sanmay Bhavanish Thota</h1>
+            <p class="hero-role">
+              Software Developer, Full-Stack Developer, and DevOps Engineer
+              building practical, secure, and scalable digital products.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#projects">View Projects</a>
+              <a class="button secondary" href="#contact">Contact Me</a>
+            </div>
+          </div>
+
+          <div class="hero-panel" aria-label="Profile summary">
+            <div class="portrait">
+              <img
+                src="images/profile.png"
+                alt="Sanmay Bhavanish Thota"
+                class="profile-image" />
+            </div>
+            <div class="signal-card">
+              <strong>Focus</strong>
+              <span
+                >Full-stack systems, cloud deployment, security testing,
+                AI/ML</span
+              >
+            </div>
+            <div class="metric-row">
+              <div>
+                <strong>5+</strong>
+                <span>Years building</span>
+              </div>
+              <div>
+                <strong>94%</strong>
+                <span>ML model accuracy</span>
+              </div>
+              <div>
+                <strong>10x</strong>
+                <span>Faster token checks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2>Engineer with a security-aware, product-minded approach.</h2>
+        </div>
+        <div class="about-layout">
+          <p>
+            Hi, I’m Sanmay Bhavanish Thota, a software developer based in
+            Sweden. I completed my Master’s in Software Engineering at Blekinge
+            Institute of Technology, where my thesis evaluated and compared
+            automated web application security testing tools.
+          </p>
+          <p>
+            My work spans full-stack development, AI/ML, cloud computing, and
+            DevOps. I enjoy building reliable backend services, clean user
+            interfaces, and systems that are easier for teams to operate and
+            scale.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2>Recent work</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-date">Dec 2024 - Present</div>
+            <div class="timeline-content">
+              <h3>Software Developer</h3>
+              <p class="company">ToneSet · Sweden</p>
+              <p>
+                Built responsive web applications, integrated MongoDB,
+                PostgreSQL, microservices, Kubernetes, Docker, Redis, RabbitMQ,
+                and OpenAI API workflows to improve engagement and backend
+                performance.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">Apr 2025 - Sep 2025</div>
+            <div class="timeline-content">
+              <h3>Software Developer</h3>
+              <p class="company">Stratus · India</p>
+              <p>
+                Developed React and TypeScript interfaces, contributed to Python
+                backend tasks, integrated REST APIs, and used OpenAI LLMs to
+                enhance backend functionality.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">May 2024 - Nov 2024</div>
+            <div class="timeline-content">
+              <h3>Backend Developer Intern</h3>
+              <p class="company">XRsolutions · Sweden</p>
+              <p>
+                Built REST API endpoints with Node.js and Express.js, optimized
+                PostgreSQL with AWS RDS and S3, and improved authentication with
+                token-based security.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">Jun 2022 - May 2024</div>
+            <div class="timeline-content">
+              <h3>Software Developer</h3>
+              <p class="company">ShadowEdge Technologies · India</p>
+              <p>
+                Built Node.js and TypeScript web applications, designed RESTful
+                APIs, deployed services on AWS, integrated Redis caching, and
+                supported Agile delivery.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">Jul 2021 - Aug 2021</div>
+            <div class="timeline-content">
+              <h3>Full-Stack Developer Intern</h3>
+              <p class="company">The Sparks Foundation · India</p>
+              <p>
+                Developed a banking website for secure fund transfers using
+                HTML, CSS, JavaScript, Bootstrap, Node.js, Express.js, and
+                MongoDB.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">Apr 2020 - May 2020</div>
+            <div class="timeline-content">
+              <h3>Backend Web Developer Intern</h3>
+              <p class="company">Yantromitra · India</p>
+              <p>
+                Implemented backend features for a student-oriented website with
+                Node.js, Express.js, MongoDB, and JavaScript.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section two-column">
         <div>
-          <form>
-            <a href="#" id="trigger" class=""></a>
-          </form>
-        </div>
-        <canvas id="background"></canvas>
-      </div>
-      <!-- <img class="profile-img" src="images/profilepic.png" alt="Profile Picture" /> -->
-
-      <div class="col-md-7 heading">
-        <!-- HTML !-->
-        <h1>Hi I'm <spam class="sanmay">Sanmay</spam> Bhavanish Thota</h1>
-        <h3>from Sweden 🇸🇪</h3>
-        <hr class="role" />
-        <h5>Software Developer | Fullstack Developer | DevOps Engineer</h5>
-      </div>
-
-      <ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
-
-    <h2 class="div-headings" id="Aboutme">About Me</h2>
-    <hr class="slash-line" />
-    <div class="about reveal">
-      <p>
-        Hi there! 👋 My name is Sanmay Bhavanish Thota, and I’m currently based
-        in Sweden. I completed my Master’s in Software Engineering at Blekinge
-        Institute of Technology, where I wrote my thesis on “Evaluating and
-        Comparing Automated Web Application Security Testing Tools.” Through
-        this work, I explored web application security and analyzed different
-        automated testing tools. I’m also passionate about full-stack
-        development, AI/ML, and cloud computing. Right now, I’m working as a
-        Software Developer, where I get to apply both my academic background and
-        hands-on skills. I’m always open to connecting and exploring
-        opportunities to contribute to meaningful projects and build innovative
-        solutions with technology.
-      </p>
-    </div>
-
-    <div class="container reveal about-me">
-      <div class="card work-experience-section">
-        <div class="card-title">Experience</div>
-        <div class="job">
-          <h4>Software Developer</h4>
-          <h5>ToneSet</h5>
-          <p class="year-location">
-            <i class="fas fa-calendar-alt"></i> Dec 2024 – Present
-            <i class="fas fa-map-marker-alt"></i> Sweden
-          </p>
-          <ul>
-            <li>
-              Built a responsive web app designed to improve engagement by up to
-              20% through faster performance.
-            </li>
-            <li>
-              Integrated MongoDB, PostgreSQL, and microservices with Kubernetes
-              and Docker, improving performance by 15%.
-            </li>
-            <li>
-              Cached blacklisted tokens in Redis on logout, boosting response
-              speed by approximately 10× compared to database lookups.
-            </li>
-            <li>
-              Used RabbitMQ for message queuing to handle OTPs, communication,
-              and promotional workflows efficiently.
-            </li>
-            <li>
-              Used AI/ML and OpenAI’s API to process user data in the backend
-              and followed the Kanban method for efficient development.
-            </li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <h4>Software Developer</h4>
-          <h5>Stratus</h5>
-          <p class="year-location">
-            <i class="fas fa-calendar-alt"></i> April 2025 - Sept 2025
-            <i class="fas fa-map-marker-alt"></i> India
-          </p>
-          <ul>
-            <li>
-              Developed reliable and user-friendly interfaces with React and
-              TypeScript, reducing UI-related bugs by 15%, while also
-              contributing to backend tasks using Python
-            </li>
-            <li>
-              Integrated REST APIs and improved usability by focusing on
-              reliability and detail in implementation
-            </li>
-            <li>
-              Applied prompt engineering with Python and integrated OpenAI LLMs
-              to enhance backend functionality
-            </li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <h4>Backend Developer - Intern</h4>
-          <h5>XRsolutions</h5>
-          <p class="year-location">
-            <i class="fas fa-calendar-alt"></i> May 2024 – Nov 2024
-            <i class="fas fa-map-marker-alt"></i> Sweden
-          </p>
-          <ul>
-            <li>
-              Collaborated with a development team of 11 to build a web app,
-              working to display 3D models on 2D video.
-            </li>
-            <li>
-              Optimized PostgreSQL databases with AWS RDS and S3, enhancing
-              performance and storage efficiency by 5%.
-            </li>
-            <li>
-              Developed API endpoints with REST API, Node.js, and Express.js.
-            </li>
-            <li>
-              Enhanced application security by implementing token-based
-              authentication.
-            </li>
-            <li>
-              Engaged in regular team meetings and agile sprints, contributing
-              to sprint planning and stand-ups.
-            </li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <h4>Software Developer</h4>
-          <h5>ShadowEdge Technologies</h5>
-          <p class="year-location">
-            <i class="fas fa-calendar-alt"></i> June 2022 – May 2024
-            <i class="fas fa-map-marker-alt"></i> India
-          </p>
-          <ul>
-            <li>
-              Built a robust web application with Node.js and TypeScript,
-              enabling scalable, type-safe backend logic
-            </li>
-            <li>
-              Designed RESTful APIs for core products, improving data retrieval
-              speed and supporting scalable business growth
-            </li>
-            <li>
-              Improved development speed and team collaboration through
-              effective use of Git and Agile
-            </li>
-            <li>
-              Deployed services on AWS and integrated Redis caching to boost
-              performance and reliability
-            </li>
-            <li>
-              Presented our organization’s goals at various gatherings,
-              resulting in a 30% increase in collaborative initiatives
-            </li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <h4>Fullstack Developer - Intern</h4>
-          <h5>The Sparks Foundation</h5>
-          <p class="year-location">
-            <i class="fas fa-calendar-alt"></i> July 2021 – Aug 2021
-            <i class="fas fa-map-marker-alt"></i> India
-          </p>
-          <ul>
-            <li>
-              Developed a banking website facilitating seamless transfer of
-              funds while ensuring the security of users' data.
-            </li>
-            <li>Technologies used:</li>
-            <ul>
-              <li>Frontend: HTML5, CSS3, JavaScript, Bootstrap</li>
-              <li>Backend: Node.js, Express.js</li>
-              <li>Database: MongoDB</li>
-            </ul>
-          </ul>
-        </div>
-
-        <div class="job">
-          <h4>Backend Web Developer - Intern</h4>
-          <h5>Yantromitra</h5>
-          <p class="year-location">
-            <i class="fas fa-calendar-alt"></i> April 2020 – May 2020
-            <i class="fas fa-map-marker-alt"></i> India
-          </p>
-          <ul>
-            <li>
-              Implemented the backend for a student-oriented website, resulting
-              in a 30% reduction in administrative workload through streamlined
-              grade viewing and course registration management.
-            </li>
-            <li>
-              Technologies used: Node.js, Express.js, MongoDB, and JavaScript.
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="card education-section">
-        <div class="card-title">Education</div>
-        <h4>Masters in Software Engineering</h4>
-        <h6>Blekinge Institute of Technology</h6>
-        <p class="year-location">
-          <i class="fas fa-calendar-alt"></i> 2022 - 2024
-          <i class="fas fa-map-marker-alt"></i> Karlskrona, Sweden
-        </p>
-        <h4>Bachelors in Computer Science</h4>
-        <h6>Jawaharlal Nehru Technological University</h6>
-        <p class="year-location">
-          <i class="fas fa-calendar-alt"></i> 2018 - 2022
-          <i class="fas fa-map-marker-alt"></i> Hyderabad, India
-        </p>
-        <p class="cgpa">CGPA - 8.13</p>
-      </div>
-      <div class="card skills-section">
-        <div class="card-title">Skills</div>
-        <h4>Programming Languages</h4>
-        <img src="images/skill.png" alt="Skills" class="skill-image" />
-        <h4>Skill Set</h4>
-        <img src="images/skillset.png" alt="Skill Set" class="skill-image" />
-        <h4>Tools</h4>
-        <p class="tools-list">
-          Figma, GIT, Jira, GITHUB, OWASP ZAP, Postman, GITLAB
-        </p>
-        <p class="knowledge">
-          Data Structures, Computer Network, Operating Systems, Software Quality
-          Assurance, UML
-        </p>
-      </div>
-    </div>
-
-    <h2 class="div-headings" id="Projects">Projects</h2>
-    <div class="reveal project_whole_div">
-      <hr class="slash-line" />
-      <p class="project_div_description">
-        I am thrilled to present to you a collection of my notable projects that
-        showcase my skills and passion for these fields. For instance, I built a
-        heart disease prediction model, achieving impressive accuracy rates
-        using advanced techniques such as XGBoost and Logistic Regression. These
-        projects reflect my ability to analyze complex data and develop robust
-        machine learning models.
-      </p>
-      <p class="project_div_description">
-        Furthermore, my proficiency in Full Stack Development has allowed me to
-        create impactful web applications. I have worked on diverse projects,
-        including a digital platform for adoption that utilized an agile
-        methodology. Through this project, I enhanced user engagement with
-        features such as posts and a personal chat box. Additionally, I
-        developed a Group Chat web application, enabling seamless user
-        interaction both privately and publicly. One of my notable
-        accomplishments is the creation of a Netflix Clone, a streaming
-        application built using the React.js framework. By leveraging the TMDB
-        API, I integrated the platform with popular and top-rated movies,
-        providing an immersive user experience. These projects highlight my
-        ability to blend technical expertise with creativity to deliver
-        innovative solutions. I am committed to continuous learning and staying
-        up-to-date with the latest advancements in Machine Learning and
-        Fullstack Development.
-      </p>
-
-      <!-- @TODO: Move away from custom props before injecting the polyfill, as it can't handle it -->
-
-      <main>
-        <ul id="cards">
-          <li class="card-scroll" id="card_1">
-            <div class="card__content">
-              <div>
-                <h2>Evaluating automated WAS testing tools</h2>
-                <p>
-                  Conducted analysis of 5 automated web application testing
-                  tools for website security assessment.
-                </p>
-                <p>
-                  Compared and evaluated 5 tools based on key metrics to
-                  determine their effectiveness.
-                </p>
-                <p>
-                  Project as test environments to assess and compare the tools.
-                </p>
-                <p>
-                  <a
-                    href="https://www.diva-portal.org/smash/get/diva2:1875457/FULLTEXT01.pdf"
-                    class="btn btn--accent"
-                    >Read more</a
-                  >
-                </p>
-              </div>
-              <figure>
-                <img src="images/testing.png" alt="Image description" />
-              </figure>
-            </div>
-          </li>
-          <li class="card-scroll" id="card_2">
-            <div class="card__content">
-              <div>
-                <h2>To Do List</h2>
-                <p>
-                  Created a adaptive web application using Node.js, MongoDB that
-                  allows users to manage their tasks
-                </p>
-                <p>
-                  Deployed into AWS using CI/CD, Elastic Beanstalk, S3, Docker
-                  pipelines with GITLab.
-                </p>
-                <p>
-                  Project Link:
-                  <a
-                    href="https://gitlab.com/sanmay1/to-do-list/-/tree/master?ref_type=heads"
-                    >https://gitlab.com/sanmay1/to-do-list</a
-                  >
-                </p>
-              </div>
-              <figure>
-                <img src="images/todolist.png" alt="Image description" />
-              </figure>
-            </div>
-          </li>
-          <li class="card-scroll" id="card_3">
-            <div class="card__content">
-              <div>
-                <h2>Heart disease prediction</h2>
-                <p>
-                  Built a machine learning-based heart disease prediction model
-                  by analyzing different risk factors
-                </p>
-                <p>
-                  Attained an accuracy of 94% with XGBoost and 92% with Logistic
-                  Regression.
-                </p>
-              </div>
-              <figure>
-                <img src="images/heart.png" alt="Image description" />
-              </figure>
-            </div>
-          </li>
-          <li class="card-scroll" id="card_4">
-            <div class="card__content">
-              <div>
-                <h2>Group Chat</h2>
-                <p>
-                  Created a web application social platform enabling user
-                  interaction with others privately and publicly
-                </p>
-                <p>
-                  Employed ejs, Node.js, mongoose, express.js, Bootstrap and
-                  Figma for user interface development
-                </p>
-                <p>
-                  Project Link:
-                  <a href="https://github.com/sammy2201/groupChat"
-                    >https://github.com/sammy2201/groupChat</a
-                  >
-                </p>
-              </div>
-              <figure>
-                <img src="images/grpchat.png" alt="Image description" />
-              </figure>
-            </div>
-          </li>
-          <li class="card-scroll" id="card_5">
-            <div class="card__content">
-              <div>
-                <h2>Netflix Clone</h2>
-                <p>
-                  Built a Netflix-like streaming application using the React.js
-                  framework
-                </p>
-                <p>
-                  Employed TMDB API for pulling most popular movies and top
-                  rated movies.
-                </p>
-              </div>
-              <figure>
-                <img src="images/netflix.png" alt="Image description" />
-              </figure>
-            </div>
-          </li>
-          <li class="card-scroll" id="card_6">
-            <div class="card__content">
-              <div>
-                <h2>Other Projects</h2>
-                <p>Snake game</p>
-                <p>Speech to text web app</p>
-                <p>movie recommendation</p>
-                <p>turtle crossing game</p>
-                <p>message spam classifier</p>
-                <p>Bitcoin Price Predictor</p>
-              </div>
-              <figure>
-                <img src="images/other.png" alt="Image description" />
-              </figure>
-            </div>
-          </li>
-        </ul>
-      </main>
-    </div>
-
-    <h2 class="div-headings" id="Art">Art</h2>
-    <div class="art">
-      <hr class="slash-line" />
-      <p>
-        🎨 Welcome to my creative corner! 🖌️ On this website, I'm thrilled to
-        share a glimpse into my artistic world through a collection of sketches.
-        Each piece is a unique expression of inspiration, reflecting moments
-        where thoughts and emotions come alive visually.
-      </p>
-      <p>
-        ✨ Browse through my gallery and witness the result of hours dedicated
-        to honing my craft. These sketches are more than drawings; they're
-        windows into my creative soul. I hope these artworks captivate your
-        imagination and offer a journey through my evolving artistic landscape.
-        🌈 Join me in celebrating the beauty of creativity! 🚀
-      </p>
-
-      <p class="art_image_p col-md-12">
-        <img class="artimage" src="images/pic1.jpeg" />
-        <img class="artimage" src="images/pic2.jpeg" />
-        <img class="artimage" src="images/pic3.jpeg" />
-        <img class="artimage" src="images/pic4.jpeg" />
-        <img class="artimage" src="images/pic5.jpeg" />
-      </p>
-    </div>
-
-    <div class="Drop_a_message reveal" id="Contactme">
-      <h3>Drop a message</h3>
-
-      <form action="https://formspree.io/f/mzbnrowl" method="POST">
-        <div class="form-row">
-          <div class="col-md-4 mb-3">
-            <label for="validationTooltip01">First name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationTooltip01"
-              placeholder="First name"
-              required
-              name="firstName" />
+          <div class="section-heading compact">
+            <p class="eyebrow">Education</p>
+            <h2>Academic background</h2>
           </div>
-          <div class="col-md-4 mb-3">
-            <label for="validationTooltip02">Last name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationTooltip02"
-              placeholder="Last name"
-              name="lastName" />
-          </div>
-          <div class="col-md-4 mb-3">
-            <label for="validationTooltipUsername">Email</label>
-            <div class="input-group">
-              <input
-                type="email"
-                class="form-control"
-                id="validationTooltipUsername"
-                placeholder="email"
-                required
-                name="email" />
-            </div>
+          <div class="stacked-cards">
+            <article class="info-card">
+              <h3>Master’s in Software Engineering</h3>
+              <p>Blekinge Institute of Technology</p>
+              <span>2022 - 2024 · Karlskrona, Sweden</span>
+            </article>
+            <article class="info-card">
+              <h3>Bachelor’s in Computer Science</h3>
+              <p>Jawaharlal Nehru Technological University</p>
+              <span>2018 - 2022 · Hyderabad, India · CGPA 8.13</span>
+            </article>
           </div>
         </div>
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Drop a message</label>
-          <textarea
-            class="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-            name="message"></textarea>
+
+        <div>
+          <div class="section-heading compact">
+            <p class="eyebrow">Skills</p>
+            <h2>Technical toolkit</h2>
+          </div>
+          <div class="skill-cloud">
+            <span>JavaScript</span>
+            <span>TypeScript</span>
+            <span>React</span>
+            <span>Node.js</span>
+            <span>Express.js</span>
+            <span>Python</span>
+            <span>MongoDB</span>
+            <span>PostgreSQL</span>
+            <span>Redis</span>
+            <span>RabbitMQ</span>
+            <span>Docker</span>
+            <span>Kubernetes</span>
+            <span>AWS</span>
+            <span>Git</span>
+            <span>GitLab</span>
+            <span>Postman</span>
+            <span>OWASP ZAP</span>
+            <span>Figma</span>
+            <span>AI/ML</span>
+            <span>OpenAI API</span>
+          </div>
         </div>
-        <button class="glowing-btn" type="submit">
-          <span class="glowing-txt"
-            >S<span class="faulty-letter">E</span>ND</span
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h2>Selected builds and experiments</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card featured">
+            <div class="project-number">01</div>
+            <h3>Evaluating Automated WAS Testing Tools</h3>
+            <p>
+              Analyzed five automated web application security testing tools and
+              compared them across key metrics using test environments.
+            </p>
+            <a
+              href="https://www.diva-portal.org/smash/get/diva2:1875457/FULLTEXT01.pdf"
+              >Read thesis</a
+            >
+          </article>
+
+          <article class="project-card">
+            <div class="project-number">02</div>
+            <h3>To Do List</h3>
+            <p>
+              Task management application using Node.js and MongoDB, deployed
+              with AWS, CI/CD, Elastic Beanstalk, S3, Docker, and GitLab.
+            </p>
+            <a
+              href="https://gitlab.com/sanmay1/to-do-list/-/tree/master?ref_type=heads"
+              >View project</a
+            >
+          </article>
+
+          <article class="project-card">
+            <div class="project-number">03</div>
+            <h3>Heart Disease Prediction</h3>
+            <p>
+              Machine learning model for heart disease prediction with 94%
+              accuracy using XGBoost and 92% using Logistic Regression.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-number">04</div>
+            <h3>Group Chat</h3>
+            <p>
+              Social web application for private and public interaction using
+              EJS, Node.js, Mongoose, Express.js, Bootstrap, and Figma.
+            </p>
+            <a href="https://github.com/sammy2201/groupChat">View GitHub</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-number">05</div>
+            <h3>Netflix Clone</h3>
+            <p>
+              React streaming interface using the TMDB API to pull popular and
+              top-rated movie data.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-number">06</div>
+            <h3>Other Projects</h3>
+            <p>
+              Snake game, speech-to-text app, movie recommendation system,
+              turtle crossing game, spam classifier, and Bitcoin price
+              predictor.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section art-section" id="art">
+        <div class="section-heading">
+          <p class="eyebrow">Art</p>
+          <h2>Creative corner</h2>
+        </div>
+        <div class="art-layout">
+          <p>
+            Beyond engineering, I enjoy sketching as a way to explore ideas,
+            emotion, and visual storytelling. Each piece is a small window into
+            the creative side that also shapes how I think about product design
+            and user experience.
+          </p>
+          <div class="art-strip" aria-label="Sketch gallery">
+            <img src="images/pic1.jpeg" alt="Sketch 01" />
+            <img src="images/pic2.jpeg" alt="Sketch 02" />
+            <img src="images/pic3.jpeg" alt="Sketch 03" />
+            <img src="images/pic4.jpeg" alt="Sketch 04" />
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s build something meaningful.</h2>
+          <p>
+            I’m open to software development, full-stack, DevOps, AI/ML, and
+            cloud-focused opportunities.
+          </p>
+        </div>
+        <div class="contact-card">
+          <a href="mailto:sanmay.bhavanish.thota@gmail.com"
+            >sanmay.bhavanish.thota@gmail.com</a
           >
-        </button>
-      </form>
-    </div>
+          <a
+            href="https://www.linkedin.com/in/sanmay-bhavanish-thota-2864131b6/"
+            >LinkedIn</a
+          >
+          <a href="https://github.com/sammy2201">GitHub</a>
+          <a href="https://www.instagram.com/sanmay_sam">Instagram</a>
+        </div>
+      </section>
+    </main>
 
-    <div class="sticky-text">
-      sanmay.bhavanish.thota@gmail.com
-      <div class="vertical-line"></div>
-    </div>
-
-    <div class="sticky-text-left">
-      <a href="https://www.linkedin.com/in/sanmay-bhavanish-thota-2864131b6/"
-        ><i class="fa-brands fa-linkedin social"></i
-      ></a>
-    </div>
-
-    <div class="sticky-text-left github">
-      <a href="https://github.com/sammy2201"
-        ><i class="fa-brands fa-github social"></i
-      ></a>
-    </div>
-
-    <div class="sticky-text-left insta">
-      <a href="https://www.instagram.com/sanmay_sam">
-        <i class="fa-brands fa-square-instagram social"></i
-      ></a>
-    </div>
-
-    <script>
-      function submitForm() {
-        var formData = {
-          firstName: document.getElementById("validationTooltip01").value,
-          lastName: document.getElementById("validationTooltip02").value,
-          email: document.getElementById("validationTooltipUsername").value,
-          message: document.getElementById("exampleFormControlTextarea1").value,
-        };
-
-        var endpoint = "https://formspree.io/f/mzbnrowl";
-
-        fetch(endpoint, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Network response was not ok");
-            }
-            alert("Form submitted successfully!");
-
-            // Reset the form
-            document.getElementById("myForm").reset();
-          })
-          .then((data) => {
-            // Handle the response as needed
-            console.log("Success:", data);
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-          });
-      }
-
-      function reveal() {
-        var reveals = document.querySelectorAll(".reveal");
-
-        for (var i = 0; i < reveals.length; i++) {
-          var windowHeight = window.innerHeight;
-          var elementTop = reveals[i].getBoundingClientRect().top;
-          var elementVisible = 10;
-
-          // Check if the element is within 50px of the viewport
-          if (elementTop < windowHeight + 120 - elementVisible) {
-            reveals[i].classList.add("active");
-          } else {
-            reveals[i].classList.remove("active");
-          }
-        }
-      }
-
-      window.addEventListener("scroll", reveal);
-
-      const aboutSection = document.querySelector(".about");
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            aboutSection.classList.add("visible"); // Add the 'visible' class when in view
-          }
-        });
-      });
-
-      observer.observe(aboutSection);
-
-      function App(conf) {
-        conf = {
-          fov: 75,
-          cameraZ: 75,
-          xyCoef: 60,
-          zCoef: 10,
-          lightIntensity: 0.9,
-          ambientColor: 0x000000,
-          light1Color: 0x0e09dc,
-          light2Color: 0x1cd1e1,
-          light3Color: 0x18c02c,
-          light4Color: 0xee3bcf,
-          el: "background", // Added default value for 'el'
-        };
-
-        let renderer, scene, camera, cameraCtrl;
-        let width, height, cx, cy, wWidth, wHeight;
-        const TMath = THREE.Math;
-
-        let plane;
-        const simplex = new SimplexNoise();
-
-        const mouse = new THREE.Vector2();
-        const mousePlane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);
-        const mousePosition = new THREE.Vector3();
-        const raycaster = new THREE.Raycaster();
-
-        init();
-
-        function init() {
-          renderer = new THREE.WebGLRenderer({
-            canvas: document.getElementById(conf.el),
-            antialias: true,
-            alpha: true,
-          });
-          camera = new THREE.PerspectiveCamera(conf.fov);
-          camera.position.z = conf.cameraZ;
-
-          updateSize();
-          window.addEventListener("resize", updateSize, false);
-
-          document.addEventListener("mousemove", function (e) {
-            const v = new THREE.Vector3();
-            camera.getWorldDirection(v);
-            v.normalize();
-            mousePlane.normal = v;
-            mouse.x = (e.clientX / width) * 2 - 1;
-            mouse.y = -(e.clientY / height) * 2 + 1;
-            raycaster.setFromCamera(mouse, camera);
-            raycaster.ray.intersectPlane(mousePlane, mousePosition);
-          });
-
-          document
-            .getElementById("trigger")
-            .addEventListener("click", function () {
-              randomizeCoefficients();
-              updateLightsColors();
-            });
-
-          initScene();
-          animate();
-        }
-
-        function initScene() {
-          scene = new THREE.Scene();
-          initLights();
-
-          let mat = new THREE.MeshLambertMaterial({
-            color: 0xffffff,
-            side: THREE.DoubleSide,
-          });
-          let geo = new THREE.PlaneBufferGeometry(
-            wWidth,
-            wHeight,
-            wWidth / 2,
-            wHeight / 2
-          );
-          plane = new THREE.Mesh(geo, mat);
-          scene.add(plane);
-
-          plane.rotation.x = -Math.PI / 2 - 0.2;
-          plane.position.y = -25;
-          camera.position.z = 60;
-        }
-
-        function initLights() {
-          const r = 30;
-          const y = 10;
-          const lightDistance = 500;
-
-          light1 = new THREE.PointLight(
-            conf.light1Color,
-            conf.lightIntensity,
-            lightDistance
-          );
-          light1.position.set(0, y, r);
-          scene.add(light1);
-          light2 = new THREE.PointLight(
-            conf.light2Color,
-            conf.lightIntensity,
-            lightDistance
-          );
-          light2.position.set(0, -y, -r);
-          scene.add(light2);
-          light3 = new THREE.PointLight(
-            conf.light3Color,
-            conf.lightIntensity,
-            lightDistance
-          );
-          light3.position.set(r, y, 0);
-          scene.add(light3);
-          light4 = new THREE.PointLight(
-            conf.light4Color,
-            conf.lightIntensity,
-            lightDistance
-          );
-          light4.position.set(-r, y, 0);
-          scene.add(light4);
-        }
-
-        function animate() {
-          requestAnimationFrame(animate);
-
-          animatePlane();
-          animateLights();
-
-          renderer.render(scene, camera);
-        }
-
-        function animatePlane() {
-          gArray = plane.geometry.attributes.position.array;
-          const time = Date.now() * 0.0002;
-          for (let i = 0; i < gArray.length; i += 3) {
-            gArray[i + 2] =
-              simplex.noise4D(
-                gArray[i] / conf.xyCoef,
-                gArray[i + 1] / conf.xyCoef,
-                time,
-                mouse.x + mouse.y
-              ) * conf.zCoef;
-          }
-          plane.geometry.attributes.position.needsUpdate = true;
-        }
-
-        function animateLights() {
-          const time = Date.now() * 0.001;
-          const d = 50;
-          light1.position.x = Math.sin(time * 0.1) * d;
-          light1.position.z = Math.cos(time * 0.2) * d;
-          light2.position.x = Math.cos(time * 0.3) * d;
-          light2.position.z = Math.sin(time * 0.4) * d;
-          light3.position.x = Math.sin(time * 0.5) * d;
-          light3.position.z = Math.sin(time * 0.6) * d;
-          light4.position.x = Math.sin(time * 0.7) * d;
-          light4.position.z = Math.cos(time * 0.8) * d;
-        }
-
-        function updateLightsColors() {
-          light1.color = new THREE.Color(conf.light1Color);
-          light2.color = new THREE.Color(conf.light2Color);
-          light3.color = new THREE.Color(conf.light3Color);
-          light4.color = new THREE.Color(conf.light4Color);
-        }
-
-        function randomizeCoefficients() {
-          // No randomization needed, coefficients are set to specific values
-        }
-
-        function updateSize() {
-          width = window.innerWidth;
-          cx = width / 2;
-          height = window.innerHeight;
-          cy = height / 2;
-          if (renderer && camera) {
-            renderer.setSize(width, height);
-            camera.aspect = width / height;
-            camera.updateProjectionMatrix();
-            const wsize = getRendererSize();
-            wWidth = wsize[0];
-            wHeight = wsize[1];
-          }
-        }
-
-        function getRendererSize() {
-          const cam = new THREE.PerspectiveCamera(camera.fov, camera.aspect);
-          const vFOV = (cam.fov * Math.PI) / 180;
-          const height = 2 * Math.tan(vFOV / 2) * Math.abs(conf.cameraZ);
-          const width = height * cam.aspect;
-          return [width, height];
-        }
-      }
-
-      // Create an instance of App with default configuration
-      App({ el: "background" });
-
-      window.addEventListener("scroll", function () {
-        var canvas = document.getElementById("background");
-
-        if (window.scrollY > 0) {
-          // Check if the page has been scrolled
-          canvas.style.opacity = 0; // Hide the canvas
-        } else {
-          canvas.style.opacity = 1; // Show the canvas when at the top of the page
-        }
-      });
-    </script>
+    <footer class="site-footer">
+      <p>“There are infinite number of chances as long as I’m alive.”</p>
+      <span>© Sanmay Bhavanish Thota</span>
+    </footer>
   </body>
-
-  <footer class="footer">
-    <div class="footer__parralax">
-      <div class="footer__parralax-trees"></div>
-      <div class="footer__parralax-moto"></div>
-      <div class="footer__parralax-secondplan"></div>
-      <div class="footer__parralax-premierplan"></div>
-      <div class="footer__parralax-voiture"></div>
-    </div>
-    <img src="images/logo.png" class="footer_logo" alt="" />
-    <p class="footer_p">
-      " There are infinite number of chances as long as I'm alive ✌️ "
-    </p>
-    <p>© Sanmay Bhavanish</p>
-  </footer>
 </html>
